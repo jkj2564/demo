@@ -23,4 +23,5 @@ public class UserController {
       System.out.println(id);
       return ResponseEntity.ok(userService.getUserById(id));
     }
+    
 }
