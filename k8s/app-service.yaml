@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: demo-service
+  namespace: group1-team5-test1
+spec:
+  selector:
+    app: demo-team5-test1
+  ports:
+    - protocol: TCP
+      port: 30522 
+      targetPort: 8050
+      nodePort: 30523
+  type: NodePort

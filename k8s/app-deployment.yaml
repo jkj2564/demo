@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: demo-deployment
+  namespace: group1-team5-test1
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: demo-team5-test1
+  template:
+    metadata:
+      labels:
+        app: demo-team5-test1
+    spec:
+      containers:
+        - name: demo-team5-test1
+          image: k8s-vga-worker1:5000/team5-app-demo:latest
+          ports:
+            - containerPort: 8050
